@@ -9,7 +9,7 @@ During complex and extended operations artifacts may be dropped to disk in sever
 
 I re-defined the CobaltStrike upload command so that each time a file is uploaded it is also logged in an easy to read format.  The major difference between the two is that the custom defined upload command also calls the 'pwd' command in order to fetch the directory that the file was just uploaded to.  This is necessary for logging purposes.
 
-The new upload command works just like the original one, you can either enter "upload" and then select a file to upload from file browser, or enter "upload <path-to-file>" and upload without the file browser.  The script will ensure that the file you are trying to upload exists and return an error if it doesn't.
+The new upload command works just like the original one, you can either enter "upload" and then select a file to upload from file browser, or enter "upload my/file/path.exe" and upload without the file browser.  The script will ensure that the file you are trying to upload exists and return an error if it doesn't.
 
 Each time a file is uploaded a new log entry is made.  The script calls the host OS to run md5sum on the uploaded file in order to retrieve and log the uploaded files MD5 hash for deconfliction/tracking. Additionally the entire upload table is written out to a file on the attacker system. 
 
