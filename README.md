@@ -47,3 +47,11 @@ It is assumed that the file being moved to the new machine in the network is a p
 The "viewuploads" command can also be used to delete log entires.  This can be useful should a typo be made when entering a log manually, but also when performing clean-up.  Operators may remove upload table entries as they clean their way out of the network to keep an easily-accessible list of what artifacts still reside on disk in the target network. 
 
 ![image](https://user-images.githubusercontent.com/91164728/200205078-3c7e5f7f-b627-4671-aa62-c320d7d2d951.png)
+
+## Setup
+
+Simply load upload.cna into CobaltStrike script manager.  On initial load upload.cna will attempt to create uploadedfiles.txt in the CobaltStrike directory.  If you receive an error it could be that the use who is running CobaltStrike doesn't have write permissions in the directory.  
+
+Once uploadedfiles.txt has been created, all subsequent loads of upload.cna will read in uploadedfiles.txt and populate the uploads table with whatever data is in the file.  This ensures that data is not lost when the Client crashes or restarts.
+
+To fully clear the uploads table, simply delete uploadedfiles.txt.  A fresh, blank copy will be made the next time upload.cna is loaded.
