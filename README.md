@@ -16,7 +16,7 @@ Each time a file is uploaded a new log entry is made.  The script calls the host
 The upload table tracks the following fields:
 
 1. Upload Date/Time
-2. Target Interal IP
+2. Target Internal IP
 3. Upload Directory
 4. Remote File Name
 5. Uploaded File
